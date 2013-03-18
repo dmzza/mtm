@@ -1,0 +1,55 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @match.name %>
+</p>
+
+<p>
+  <b>Price:</b>
+  <%= @match.price %>
+</p>
+
+<p>
+  <b>Link:</b>
+  <%= @match.link %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @match.description %>
+</p>
+
+<p>
+  <b>Brand:</b>
+  <%= @match.brand %>
+</p>
+
+<p>
+  <b>Product:</b>
+  <%= @match.product %>
+</p>
+
+<p>
+  <b>Color:</b>
+  <%= @match.color %>
+</p>
+
+<p>
+  <b>Texture:</b>
+  <%= @match.texture %>
+</p>
+
+<p>
+  <b>Luminosity:</b>
+  <%= @match.luminosity %>
+</p>
+
+<p>
+  <b>Overall:</b>
+  <%= @match.overall %>
+</p>
+
+
+<%= link_to 'Edit', edit_match_path(@match) %> |
+<%= link_to 'Back', matches_path %>

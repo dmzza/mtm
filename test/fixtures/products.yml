@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  price: 1.5
+  link: MyString
+  description: MyText
+  brand: chanel
+  area: skin
+  category: foundation
+
+two:
+  name: MyString
+  price: 1.5
+  link: MyString
+  description: MyText
+  brand: chanel
+  area: eyes
+  category: eyeliner

@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  price: 1.5
+  link: MyString
+  description: MyText
+  brand: covergirl
+  product: one
+  color: 1.5
+  texture: 1.5
+  luminosity: 1.5
+  overall: 1.5
+
+two:
+  name: MyString
+  price: 1.5
+  link: MyString
+  description: MyText
+  brand: chanel
+  product: one
+  color: 1.5
+  texture: 1.5
+  luminosity: 1.5
+  overall: 1.5

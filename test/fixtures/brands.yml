@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+chanel:
+  name: "Chanel"
+  website: "http://chanel.com"
+
+covergirl:
+  name: "CoverGirl"
+  website: "http://covergirl.com"
