@@ -13,3 +13,29 @@
  */
 @import "bourbon";
 @import "neat";
+
+body  {
+	background-color: #eceef1;
+}
+
+div.container {
+	@include outer-container;
+	background-color: white;
+}
+
+div.row {
+	@include span-columns(12);
+}
+
+div.one_third {
+	@include span-columns(4);
+}
+
+div.one_fourth {
+	@include span-columns(3);
+}
+
+div.updateform {
+	@include shift(1);
+	@include span-columns(10);
+}
