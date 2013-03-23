@@ -35,7 +35,28 @@ div.one_fourth {
 	@include span-columns(3);
 }
 
+div.five_sixths {
+	@include span-columns(10);
+}
+
+div.shift_one {
+	@include shift(1);
+}
+
+div.shift_two {
+	@include shift(2);
+}
+
+div.shift_three {
+	@include shift(3);
+}
+
+div.shift_four {
+	@include shift(4);
+}
+
 div.updateform {
 	@include shift(1);
 	@include span-columns(10);
 }
+
