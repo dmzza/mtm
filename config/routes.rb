@@ -13,7 +13,7 @@ Mtm::Application.routes.draw do
 
   resources :products
 
-  root :to => 'products#index'
+  root :to => 'pages#home'
 
 
   # The priority is based upon order of creation:
