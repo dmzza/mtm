@@ -14,10 +14,6 @@
 @import "bourbon";
 @import "neat";
 
-body  {
-	background-color: #eceef1;
-}
-
 div.container {
 	@include outer-container;
 }
@@ -32,6 +28,10 @@ div.one_third {
 
 div.one_fourth {
 	@include span-columns(3);
+}
+
+div.three_fourths {
+	@include span-columns(9);
 }
 
 div.five_sixths {
