@@ -7,4 +7,8 @@ class Product < ActiveRecord::Base
   def self.search(query)
   	find(:all, :conditions => ['name LIKE ?', "%#{query}%"])
   end
+
+  def self.similar(query)
+		find(:all, :conditions => ['name NOT LIKE ?', "%#{query}%"])
+  end
 end

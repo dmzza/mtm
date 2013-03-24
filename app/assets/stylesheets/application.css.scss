@@ -54,6 +54,19 @@ div.shift_four {
 	@include shift(4);
 }
 
+// Headers
+
+h3 {
+	font-size: 2em;
+	font-weight: normal;
+	font-family: "futura-pt", sans-serif;
+	text-transform: uppercase;
+	text-align: center;
+	clear: both;
+	line-height: 1.1em;
+	margin: 0 0 0 10px;
+}
+
 div.updateform {
 	@include shift(1);
 	@include span-columns(10);

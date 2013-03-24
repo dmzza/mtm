@@ -3,6 +3,7 @@ class ProductsController < ApplicationController
   # GET /products.json
   def index
     @products = Product.search(params[:q])
+    @similar = Product.similar(params[:q])
 
     respond_to do |format|
       format.html # index.html.erb

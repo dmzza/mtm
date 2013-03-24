@@ -9,19 +9,28 @@
     <% end %>
 </div>
 
-<ul>
-    <% @products.each do |product| %>
-    <li data-id="<%= product.id %>" data-name="<%= product.name %>" data-price="<%= product.price %>" data-link="<%= product.link %>" data-description="<%= product.description %>" <% if !product.brand.nil? %>data-brand="<%= product.brand.name %>"<% end %> <% if !product.area.nil? %>data-area="<%= product.area.name %>"<% end %> <% if !product.category.nil? %>data-category="<%= product.category.name %>"<% end %>>
-        <%= image_tag "lipstick.jpg" %>
-        <p><span class="brand"><%= product.brand.name %></span></p>
-        <p><%= truncate(product.name, :length => 35) %></p>
-    </li>
-    <% end %>
-    <li>
-        <img src="http://placehold.it/250x250/ffffff/000000&text=Add" alt="Add" />
-        <p><span class="brand"><%= link_to 'New Product', new_product_path %></span></p>
-        <p>its quite good</p>
-    </li>
-</ul>
-
+    <ul>
+        <% @products.each do |product| %>
+        <li data-id="<%= product.id %>" data-name="<%= product.name %>" data-price="<%= product.price %>" data-link="<%= product.link %>" data-description="<%= product.description %>" <% if !product.brand.nil? %>data-brand="<%= product.brand.name %>"<% end %> <% if !product.area.nil? %>data-area="<%= product.area.name %>"<% end %> <% if !product.category.nil? %>data-category="<%= product.category.name %>"<% end %>>
+            <%= image_tag "lipstick.jpg" %>
+            <p><span class="brand"><%= product.brand.name %></span></p>
+            <p><%= truncate(product.name, :length => 35) %></p>
+        </li>
+        <% end %>
+        <li>
+            <img src="http://placehold.it/250x250/ffffff/000000&text=Add" alt="Add" />
+            <p><span class="brand"><%= link_to 'New Product', new_product_path %></span></p>
+            <p>its quite good</p>
+        </li>
+    </ul>
+    <h3>Similar</h3>
+    <ul>
+        <% @similar.each do |product| %>
+        <li data-id="<%= product.id %>" data-name="<%= product.name %>" data-price="<%= product.price %>" data-link="<%= product.link %>" data-description="<%= product.description %>" <% if !product.brand.nil? %>data-brand="<%= product.brand.name %>"<% end %> <% if !product.area.nil? %>data-area="<%= product.area.name %>"<% end %> <% if !product.category.nil? %>data-category="<%= product.category.name %>"<% end %>>
+            <%= image_tag "lipstick.jpg" %>
+            <p><span class="brand"><%= product.brand.name %></span></p>
+            <p><%= truncate(product.name, :length => 35) %></p>
+        </li>
+        <% end %>
+    </ul>
 
