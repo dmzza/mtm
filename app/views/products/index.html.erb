@@ -9,6 +9,7 @@
     <% end %>
 </div>
 
+<div class="master">
     <ul>
         <% @products.each do |product| %>
         <li data-id="<%= product.id %>" data-name="<%= product.name %>" data-price="<%= product.price %>" data-link="<%= product.link %>" data-description="<%= product.description %>" <% if !product.brand.nil? %>data-brand="<%= product.brand.name %>"<% end %> <% if !product.area.nil? %>data-area="<%= product.area.name %>"<% end %> <% if !product.category.nil? %>data-category="<%= product.category.name %>"<% end %>>
@@ -33,4 +34,5 @@
         </li>
         <% end %>
     </ul>
+</div>
 

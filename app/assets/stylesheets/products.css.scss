@@ -11,6 +11,13 @@ body {
 	padding: 15px 0;
 }
 
+.master {
+	position: absolute;
+	width: 850px;
+	height: 85%;
+	overflow: scroll;
+}
+
 ul {
 	margin: 0;
 	padding: 0;
@@ -34,6 +41,56 @@ ul {
 			.brand {
 				font-weight: bold;
 				font-size: 1.5em;
+			}
+		}
+	}
+}
+
+@media all and (max-width: 1200px) {
+	.master {
+		width: 570px;
+	}
+}
+
+@media all and (max-width: 800px) {
+	.master {
+		width: 430px;
+	}
+	ul {
+		li {
+			width:200px;
+			img {
+				width:180px;
+			}
+		}
+	}
+}
+
+@media all and (max-width: 600px) {
+	.master {
+		width: 220px;
+	}
+}
+
+@media all and (max-width: 320px) {
+	.search {
+		height: 50px;
+		padding: 5px;
+		input {
+			width: 250px;
+		}
+		.btn {
+			display: none;
+		}
+	}
+	.master {
+		width: 320px;
+	}
+	ul {
+		li {
+			width:145px;
+			img {
+				width:125px;
 			}
 		}
 	}
