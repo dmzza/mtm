@@ -23,6 +23,11 @@ div.container {
 	background-color: white;
 }
 
+div.mega-container {
+	padding-top: 40px;
+	width: 100%;
+}
+
 div.row {
 	@include span-columns(12);
 }
@@ -60,3 +65,27 @@ div.updateform {
 	@include span-columns(10);
 }
 
+// Navigation
+
+.navigation {
+	background-color: #333;
+	color: white;
+	text-transform: uppercase;
+	position: fixed;
+	width: 100%;
+}
+
+.nav-inner {
+	width: 60%;
+	margin: 0 auto;
+	text-align: right;
+}
+
+.navigation a {
+	color: white;
+}
+
+.navigation a:hover {
+	color: white;
+	text-decoration: none;
+}
