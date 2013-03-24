@@ -23,11 +23,6 @@ div.container {
 	background-color: white;
 }
 
-div.mega-container {
-	padding-top: 40px;
-	width: 100%;
-}
-
 div.row {
 	@include span-columns(12);
 }
@@ -71,7 +66,6 @@ div.updateform {
 	background-color: #333;
 	color: white;
 	text-transform: uppercase;
-	position: fixed;
 	width: 100%;
 }
 
