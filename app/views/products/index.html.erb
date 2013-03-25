@@ -38,13 +38,16 @@
 
 <div class="detail">
     <% product = @products[0] %>
-    <h3><span class="brand"><%= product.brand.name %></span> <%= product.name %></h3>
+
 
     <%= image_tag "lipstick.jpg" %>
-    <p class="description">
-        <%= product.description %><br /><br />
-        <a href="<%= product.link %>" class="btn btn-info">Buy: <%= number_to_currency(product.price) %></a>
-    </p>
+    <div class="description">
+        <h3><span class="brand"><%= product.brand.name %></span> <%= product.name %></h3>
+        <p>
+            <%= product.description %><br /><br />
+            <a href="<%= product.link %>" class="btn btn-info">Buy: <%= number_to_currency(product.price) %></a>
+        </p>
+    </div>
 
 
     <h3>Matches</h3>

@@ -25,9 +25,9 @@ body {
 	overflow: scroll;
 	background-color: #333; /* #FAFAFA; */
 	color: white;
-	padding: 10px;
 	h3 {
 		padding-top: 10px;
+		clear: both;
 	}
 	.brand {
 		font-weight: bold;
@@ -35,21 +35,27 @@ body {
 	.description {
 		width: 60%;
 		float: right;
-		padding: 0 10px;
+		padding: 10px 20px;
+		p {
+			margin-top: 10px;
+		}
+		h3 {
+			clear: none;
+		}
 	}
 	img {
 		width: 40%;
 		float: right;
-		margin-top: 10px;
+		padding: 10px;
 	}
 	table {
 		color: black;
+		margin: 0 10px 25px 10px;
 		tr {
 			background-color: white;
 			border-top: 10px solid #333;
 			td {
 				width: 20%;
-				height: 15%;
 				position: relative;
 				text-align: left;
 				font-family: 'futura-pt', sans-serif;
@@ -71,7 +77,9 @@ body {
 				}*/
 				img {
 					margin-top: 0;
+					padding: 0;
 					float: left;
+					width: 55%;
 				}
 			}
 		}
@@ -108,12 +116,24 @@ ul {
 	}
 }
 
-@media all and (max-width: 1200px) {
+@media all and (max-width: 1300px) {
 	.master {
 		width: 570px;
 	}
 	.detail {
 		left: 570px;
+	}
+}
+
+@media all and (max-width: 1000px) {
+	.detail {
+		.description {
+			width: 100%;
+		}
+		img {
+			width: 100%;
+			margin-top: 0;
+		}
 	}
 }
 
@@ -123,12 +143,6 @@ ul {
 	}
 	.detail {
 		left: 430px;
-		.description {
-			width: 100%;
-		}
-		img {
-			width: 100%;
-		}
 	}
 	ul {
 		li {
@@ -140,7 +154,7 @@ ul {
 	}
 }
 
-@media all and (max-width: 600px) {
+@media all and (max-width: 650px) {
 	.master {
 		width: 220px;
 	}
