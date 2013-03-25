@@ -18,6 +18,66 @@ body {
 	overflow: scroll;
 }
 
+.detail {
+	position: absolute;
+	height: 85%;
+	left: 850px;
+	overflow: scroll;
+	background-color: #333; /* #FAFAFA; */
+	color: white;
+	padding: 10px;
+	h3 {
+		padding-top: 10px;
+	}
+	.brand {
+		font-weight: bold;
+	}
+	.description {
+		width: 60%;
+		float: right;
+		padding: 0 10px;
+	}
+	img {
+		width: 40%;
+		float: right;
+		margin-top: 10px;
+	}
+	table {
+		color: black;
+		tr {
+			background-color: white;
+			border-top: 10px solid #333;
+			td {
+				width: 20%;
+				height: 15%;
+				position: relative;
+				text-align: left;
+				font-family: 'futura-pt', sans-serif;
+				font-size: 1.5em;
+				&:nth-child(1) {
+					width:20%;
+				}
+				/*&:nth-child(2) {
+					width: 30%;
+				}
+				&:nth-child(3) {
+					width: 22%;
+				}
+				&:nth-child(4) {
+					width: 22%;
+				}
+				&:nth-child(5) {
+					width: 25%;
+				}*/
+				img {
+					margin-top: 0;
+					float: left;
+				}
+			}
+		}
+	}
+}
+
 ul {
 	margin: 0;
 	padding: 0;
@@ -31,6 +91,7 @@ ul {
 		padding: 10px;
 		width: 270px;
 		float: left;
+		overflow: hidden;
 		img {
 			display: block;
 		}
@@ -38,6 +99,7 @@ ul {
 			text-transform: uppercase;
 			font-family: "futura-pt",sans-serif;
 			margin:0;
+			white-space: nowrap;
 			.brand {
 				font-weight: bold;
 				font-size: 1.5em;
@@ -50,11 +112,23 @@ ul {
 	.master {
 		width: 570px;
 	}
+	.detail {
+		left: 570px;
+	}
 }
 
 @media all and (max-width: 800px) {
 	.master {
 		width: 430px;
+	}
+	.detail {
+		left: 430px;
+		.description {
+			width: 100%;
+		}
+		img {
+			width: 100%;
+		}
 	}
 	ul {
 		li {
@@ -69,6 +143,10 @@ ul {
 @media all and (max-width: 600px) {
 	.master {
 		width: 220px;
+	}
+	.detail {
+		left: 220px;
+
 	}
 }
 
@@ -85,6 +163,9 @@ ul {
 	}
 	.master {
 		width: 320px;
+	}
+	.detail {
+		display: none;
 	}
 	ul {
 		li {
