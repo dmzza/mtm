@@ -37,6 +37,7 @@
 </div>
 
 <div class="detail">
+    <% if !@products.empty? %>
     <% product = @products[0] %>
 
 
@@ -81,6 +82,9 @@
             <td>55%</td>
         </tr>
     </table>
+    <% else %>
+    <h3>Whoops, we couldn't find anything like "<%= params[:q] %>"
+    <% end %>
 </div>
 
 
