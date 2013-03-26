@@ -42,7 +42,7 @@ products = Product.create([
 		brand_id: 2,
 		area_id: 2,
 		category_id: 1,
-		description: "Discover luxurious volume that feels light as air. We took out a heavy synthetic and put in a light touch of nature — for luxurious lashes that are 20% lighter vs. the most expensive mascara. 2X more volume vs. bare lashes.",
+		description: "Discover luxurious volume that feels light as air. We took out a heavy synthetic and put in a light touch of nature - for luxurious lashes that are 20% lighter vs. the most expensive mascara. 2X more volume vs. bare lashes.",
 	},
 	{
 		name: 'ROUGE ALLURE LUMINOUS INTENSE LIP COLOUR',
