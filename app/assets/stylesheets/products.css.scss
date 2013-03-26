@@ -156,11 +156,20 @@ ul {
 
 @media all and (max-width: 650px) {
 	.master {
-		width: 220px;
+		width: 100%;
+		overflow: visible;
+		font-size: .7em;
 	}
 	.detail {
-		left: 220px;
-
+		display: none;
+	}
+	ul {
+		li {
+			width:145px;
+			img {
+				width:125px;
+			}
+		}
 	}
 }
 
@@ -177,6 +186,8 @@ ul {
 	}
 	.master {
 		width: 320px;
+		/*height: 370px;*/
+		overflow: visible;
 	}
 	.detail {
 		display: none;
