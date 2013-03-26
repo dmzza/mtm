@@ -4,11 +4,22 @@ class Product < ActiveRecord::Base
   belongs_to :category
   attr_accessible :description, :link, :name, :price, :brand_id, :area_id, :category_id
 
-  def self.search(query)
-  	find(:all, :conditions => ['name ilike ? or description ilike ?', "%#{query}%", "%#{query}%"])
+  include PgSearch
+  pg_search_scope :search, against: [:name, :description],
+  	using: {tsearch: {dictionary: "english"}},
+  	associated_against: {brand: :name, area: :name, category: :name}
+
+  def self.seek(query)
+  	search(query)
+  	# scoped
   end
 
   def self.similar(query)
-		find(:all, :conditions => ['name NOT ilike ? and description not ilike ?', "%#{query}%", "%#{query}%"])
+		results = search(query)
+		ids = []
+		results.each do |result|
+			ids.push(result.id)
+		end
+		Product.find(:all, :conditions => ['id NOT IN (?)', ids])
   end
 end
