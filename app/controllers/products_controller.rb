@@ -26,6 +26,9 @@ class ProductsController < ApplicationController
   # GET /products/new.json
   def new
     @product = Product.new
+    @brands = Brand.all
+    @areas = Area.all
+    @categories = Category.all
 
     respond_to do |format|
       format.html # new.html.erb
@@ -36,6 +39,9 @@ class ProductsController < ApplicationController
   # GET /products/1/edit
   def edit
     @product = Product.find(params[:id])
+    @brands = Brand.all
+    @areas = Area.all
+    @categories = Category.all
   end
 
   # POST /products

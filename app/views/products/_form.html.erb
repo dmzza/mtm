@@ -29,15 +29,15 @@
   </div>
   <div class="field">
     <%= f.label :brand_id %><br />
-    <%= f.text_field :brand_id %>
+    <%= collection_select(:product, :brand_id, @brands, :id, :name, { :include_blank => true }) %>
   </div>
   <div class="field">
     <%= f.label :area_id %><br />
-    <%= f.text_field :area_id %>
+    <%= collection_select(:product, :area_id, @areas, :id, :name, { :include_blank => true }) %>
   </div>
   <div class="field">
     <%= f.label :category_id %><br />
-    <%= f.text_field :category_id %>
+    <%= collection_select(:product, :category_id, @categories, :id, :name, { :include_blank => true }) %>
   </div>
   <div class="actions">
     <%= f.submit %>
