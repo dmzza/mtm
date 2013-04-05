@@ -1,8 +1,14 @@
 class MatchesController < ApplicationController
+  before_filter :find_product
+
+  def find_product
+    @product = Product.find(params[:product_id])
+  end
+
   # GET /matches
   # GET /matches.json
   def index
-    @matches = Match.all
+    @matches = @product.matches
 
     respond_to do |format|
       format.html # index.html.erb
@@ -25,6 +31,7 @@ class MatchesController < ApplicationController
   # GET /matches/new.json
   def new
     @match = Match.new
+    @brands = Brand.all
 
     respond_to do |format|
       format.html # new.html.erb
@@ -35,16 +42,17 @@ class MatchesController < ApplicationController
   # GET /matches/1/edit
   def edit
     @match = Match.find(params[:id])
+    @brands = Brand.all
   end
 
   # POST /matches
   # POST /matches.json
   def create
-    @match = Match.new(params[:match])
+    @match = @product.matches.new(params[:match])
 
     respond_to do |format|
       if @match.save
-        format.html { redirect_to @match, notice: 'Match was successfully created.' }
+        format.html { redirect_to @product, notice: 'Match was successfully created.' }
         format.json { render json: @match, status: :created, location: @match }
       else
         format.html { render action: "new" }
@@ -60,7 +68,7 @@ class MatchesController < ApplicationController
 
     respond_to do |format|
       if @match.update_attributes(params[:match])
-        format.html { redirect_to @match, notice: 'Match was successfully updated.' }
+        format.html { redirect_to @product, notice: 'Match was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }
@@ -76,7 +84,7 @@ class MatchesController < ApplicationController
     @match.destroy
 
     respond_to do |format|
-      format.html { redirect_to matches_url }
+      format.html { redirect_to @product }
       format.json { head :no_content }
     end
   end

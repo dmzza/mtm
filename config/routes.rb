@@ -8,10 +8,9 @@ Mtm::Application.routes.draw do
   resources :brands
 
 
-  resources :matches
-
-
-  resources :products
+  resources :products do
+    resources :matches
+  end
 
   root :to => 'pages#home'
 

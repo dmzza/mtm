@@ -7,7 +7,6 @@
     <th>Link</th>
     <th>Description</th>
     <th>Brand</th>
-    <th>Product</th>
     <th>Color</th>
     <th>Texture</th>
     <th>Luminosity</th>
@@ -23,19 +22,18 @@
     <td><%= match.price %></td>
     <td><%= match.link %></td>
     <td><%= match.description %></td>
-    <td><%= match.brand %></td>
-    <td><%= match.product %></td>
+    <td><%= match.brand.name %></td>
     <td><%= match.color %></td>
     <td><%= match.texture %></td>
     <td><%= match.luminosity %></td>
     <td><%= match.overall %></td>
-    <td><%= link_to 'Show', match %></td>
-    <td><%= link_to 'Edit', edit_match_path(match) %></td>
-    <td><%= link_to 'Destroy', match, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= link_to 'Show', product_match_path(match.product, match) %></td>
+    <td><%= link_to 'Edit', edit_product_match_path(match.product, match) %></td>
+    <td><%= link_to 'Destroy', product_match_path(match.product, match), method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Match', new_match_path %>
+<%= link_to 'New Match', new_product_match_path(@product) %>
