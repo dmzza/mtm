@@ -12,7 +12,7 @@
 <div class="master">
     <ul>
         <%= render :partial => 'product', :collection => @products %>
-        <li>
+        <li data-name="New Product">
             <img src="http://placehold.it/250x250/ffffff/000000&text=Add" alt="Add" />
             <p><span class="brand"><%= link_to 'New Product', new_product_path %></span></p>
             <p>its quite good</p>
@@ -118,6 +118,5 @@
         </tr>
     </table>
 </script>
-
 
 

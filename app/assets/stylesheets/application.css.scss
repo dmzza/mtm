@@ -55,6 +55,15 @@ div.shift_four {
 	@include shift(4);
 }
 
+form {
+	margin: 20px;
+	width: 200%;
+}
+
+.field {
+	width: 50%;
+}
+
 textarea {
 	height: 80px;
 }

@@ -5,6 +5,9 @@
 $(() ->
 	showProduct = ($product) ->
 		source = $("#product-template").html()
+		if $product.data('name') is 'New Product'
+			window.location = "/products/new"
+			return
 		template = Handlebars.compile(source)
 		context = {
 			name: $product.data('name')
