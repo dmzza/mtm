@@ -88,34 +88,19 @@
 
     <h3>Matches</h3>
     <table>
+        {{#each matches}}
         <tr>
             <td><%= image_tag "lipstick.jpg" %></td>
-            <td>3.5</td>
-            <td>4.0</td>
-            <td>4.0</td>
-            <td>87%</td>
+            <td>{{color}}</td>
+            <td>{{luminosity}}</td>
+            <td>{{texture}}</td>
+            <td>{{overall}}</td>
         </tr>
-        <tr>
-            <td><%= image_tag "lipstick.jpg" %></td>
-            <td>3.0</td>
-            <td>4.5</td>
-            <td>3.0</td>
-            <td>78%</td>
-        </tr>
-        <tr>
-            <td><%= image_tag "lipstick.jpg" %></td>
-            <td>3.5</td>
-            <td>2.0</td>
-            <td>4.0</td>
-            <td>64%</td>
-        </tr>
-        <tr>
-            <td><%= image_tag "lipstick.jpg" %></td>
-            <td>2.5</td>
-            <td>2.5</td>
-            <td>3.5</td>
-            <td>55%</td>
-        </tr>
+        {{else}}
+            <h3>
+                No matches found. <a href="/products/{{id}}/matches/new">Add one?</a>
+            </h3>
+        {{/each}}
     </table>
 </script>
 

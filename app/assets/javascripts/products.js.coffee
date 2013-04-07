@@ -9,12 +9,24 @@ $(() ->
 			window.location = "/products/new"
 			return
 		template = Handlebars.compile(source)
+		matches = []
+		$product.children(".match").each(->
+			matches.push({
+				texture: $(this).data('texture')
+				luminosity: $(this).data('luminosity')
+				color: $(this).data('color')
+				overall: $(this).data('overall')
+			})
+		)
+
 		context = {
+			id: $product.data('id')
 			name: $product.data('name')
 			brand: $product.data('brand')
 			description: $product.data('description')
 			price: $product.data('price')
 			link: $product.data('link')
+			matches: matches
 		}
 		html = template(context)
 
