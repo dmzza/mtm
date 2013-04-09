@@ -32,6 +32,10 @@
     <%= collection_select(:match, :brand_id, @brands, :id, :name, { :include_blank => true }) %>
   </div>
   <div class="field">
+    <%= f.label :photo %><br />
+    <%= f.file_field :photo %>
+  </div>
+  <div class="field">
     <%= f.label :color %><br />
     <%= f.text_field :color %>
   </div>

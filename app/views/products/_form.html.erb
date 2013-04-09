@@ -16,6 +16,14 @@
     <%= f.text_field :name %>
   </div>
   <div class="field">
+    <%= f.label :area_id %><br />
+    <%= collection_select(:product, :area_id, @areas, :id, :name, { :include_blank => true }) %>
+  </div>
+  <div class="field">
+    <%= f.label :category_id %><br />
+    <%= collection_select(:product, :category_id, @categories, :id, :name, { :include_blank => true }) %>
+  </div>
+  <div class="field">
     <%= f.label :price %><br />
     <%= f.text_field :price %>
   </div>
@@ -32,13 +40,10 @@
     <%= collection_select(:product, :brand_id, @brands, :id, :name, { :include_blank => true }) %>
   </div>
   <div class="field">
-    <%= f.label :area_id %><br />
-    <%= collection_select(:product, :area_id, @areas, :id, :name, { :include_blank => true }) %>
+    <%= f.label :photo %><br />
+    <%= f.file_field :photo %>
   </div>
-  <div class="field">
-    <%= f.label :category_id %><br />
-    <%= collection_select(:product, :category_id, @categories, :id, :name, { :include_blank => true }) %>
-  </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>

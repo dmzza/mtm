@@ -16,6 +16,7 @@ $(() ->
 				luminosity: $(this).data('luminosity')
 				color: $(this).data('color')
 				overall: $(this).data('overall')
+				photo: $(this).data('photo')
 			})
 		)
 
@@ -26,6 +27,7 @@ $(() ->
 			description: $product.data('description')
 			price: $product.data('price')
 			link: $product.data('link')
+			photo: $product.data('photo')
 			matches: matches
 		}
 		html = template(context)

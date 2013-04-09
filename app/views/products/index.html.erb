@@ -76,7 +76,7 @@
 </div>
 
 <script id="product-template" type="text/x-handlebars-template">
-    <%= image_tag "lipstick.jpg" %>
+    <img src="{{photo}}">
     <div class="description">
         <h3><span class="brand">{{brand}}</span> {{name}}</h3>
         <p>
@@ -90,7 +90,7 @@
     <table>
         {{#each matches}}
         <tr>
-            <td><%= image_tag "lipstick.jpg" %></td>
+            <td><img src="{{photo}}"></td>
             <td>{{color}}</td>
             <td>{{luminosity}}</td>
             <td>{{texture}}</td>

@@ -10,6 +10,8 @@
   <%= @brand.website %>
 </p>
 
+<%= image_tag @brand.logo.url(:thumb) %>
+
 
 <%= link_to 'Edit', edit_brand_path(@brand) %> |
 <%= link_to 'Back', brands_path %>

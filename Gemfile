@@ -24,6 +24,8 @@ group :assets do
 end
 
 gem 'jquery-rails'
+gem 'paperclip'
+gem 'aws-sdk'
 
 group :development do
   gem "better_errors"
