@@ -17,7 +17,7 @@ class ProductsController < ApplicationController
     @product = Product.find(params[:id])
 
     respond_to do |format|
-      format.html # show.html.erb
+      format.html { redirect_to products_path({:q => @product.name}) }
       format.json { render json: @product }
     end
   end
