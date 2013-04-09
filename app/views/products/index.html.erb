@@ -25,54 +25,7 @@
 </div>
 
 <div class="detail">
-    <% if !@products.empty? %>
-    <% product = @products[0] %>
 
-
-    <%= image_tag "lipstick.jpg" %>
-    <div class="description">
-        <h3><span class="brand"><%= product.brand.name %></span> <%= product.name %></h3>
-        <p>
-            <%= product.description %><br /><br />
-            <a href="<%= product.link %>" class="btn btn-info">Buy: <%= number_to_currency(product.price) %></a>
-        </p>
-    </div>
-
-
-    <h3>Matches</h3>
-    <table>
-        <tr>
-            <td><%= image_tag "lipstick.jpg" %></td>
-            <td>3.5</td>
-            <td>4.0</td>
-            <td>4.0</td>
-            <td>87%</td>
-        </tr>
-        <tr>
-            <td><%= image_tag "lipstick.jpg" %></td>
-            <td>3.0</td>
-            <td>4.5</td>
-            <td>3.0</td>
-            <td>78%</td>
-        </tr>
-        <tr>
-            <td><%= image_tag "lipstick.jpg" %></td>
-            <td>3.5</td>
-            <td>2.0</td>
-            <td>4.0</td>
-            <td>64%</td>
-        </tr>
-        <tr>
-            <td><%= image_tag "lipstick.jpg" %></td>
-            <td>2.5</td>
-            <td>2.5</td>
-            <td>3.5</td>
-            <td>55%</td>
-        </tr>
-    </table>
-    <% else %>
-    <h3>Whoops, we couldn't find anything like "<%= params[:q] %>"</h3>
-    <% end %>
 </div>
 
 <script id="product-template" type="text/x-handlebars-template">
@@ -82,6 +35,7 @@
         <p>
             {{description}}<br /><br />
             <a href="{{link}}" class="btn btn-info">Buy: {{price}}</a>
+            <a href="/products/{{id}}/edit" class="btn btn-warning">Edit</a>
         </p>
     </div>
 
