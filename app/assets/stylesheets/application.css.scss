@@ -112,6 +112,37 @@ div.updateform {
 	text-decoration: none;
 }
 
+// Footer
+
+div.footer {
+	background-color: black;
+	width: 100%;
+	height: 325px;
+	color: white;
+	padding-top: 75px;
+	text-align: center;
+	text-transform: uppercase;
+	font-family: "futura-pt", sans-serif;
+	.one_fourth {
+		border-left: 2px solid #80103e;
+		&:nth-child(1) {
+			border: none;
+		}
+	}
+	h2 {
+		color: #ff2279;
+	}
+	a {
+		color: white;
+		font-size: 1.2em;
+		line-height: 40px;
+	&:hover {
+		text-decoration: none;
+		}
+	}
+
+}
+
 // Helper
 
 .clearfix {
