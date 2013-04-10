@@ -34,7 +34,7 @@ $(() ->
 
 		$(".detail").html(html)
 
-	if $(".master li:first-child").length
+	if $(".master li:first-child").length and $(".master li:first-child").data('name') isnt 'New Product'
 		showProduct($(".master li:first-child"))
 
 		$(".master li").on("click", ->
