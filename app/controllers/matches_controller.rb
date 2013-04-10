@@ -1,4 +1,5 @@
 class MatchesController < ApplicationController
+  before_filter :authenticate_user!
   before_filter :find_product
 
   def find_product

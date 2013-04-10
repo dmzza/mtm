@@ -26,6 +26,7 @@ end
 gem 'jquery-rails'
 gem 'paperclip'
 gem 'aws-sdk'
+gem 'devise'
 
 group :development do
   gem "better_errors"
