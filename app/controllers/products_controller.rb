@@ -6,7 +6,7 @@ class ProductsController < ApplicationController
     @similar = Product.similar(params[:q])
 
     respond_to do |format|
-      format.html # index.html.erb
+      format.html { render layout: "clean" } # index.html.erb
       format.json { render json: @products }
     end
   end
