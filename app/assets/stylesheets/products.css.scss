@@ -96,6 +96,9 @@ ul {
 		width: 270px;
 		float: left;
 		overflow: hidden;
+		&:hover {
+			cursor: pointer;
+		}
 		img {
 			display: block;
 		}
