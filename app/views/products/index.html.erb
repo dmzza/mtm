@@ -12,11 +12,13 @@
 <div class="master">
     <ul>
         <%= render :partial => 'product', :collection => @products %>
+        <% if user_signed_in? && current_user.is_admin %>
         <li data-name="New Product">
             <img src="http://placehold.it/250x250/ffffff/000000&text=Add" alt="Add" />
             <p><span class="brand"><%= link_to 'New Product', new_product_path %></span></p>
             <p>its quite good</p>
         </li>
+        <% end %>
     </ul>
     <h3>Similar</h3>
     <ul>
@@ -35,8 +37,10 @@
         <p>
             {{description}}<br /><br />
             <a href="{{link}}" class="btn btn-danger">Buy: {{price}}</a>
+            <% if user_signed_in? && current_user.is_admin %>
             <a href="/products/{{id}}/matches/new" class="btn btn-primary">Add Match</a>
             <a href="/products/{{id}}/edit" class="btn btn-warning">Edit</a>
+            <% end %>
         </p>
     </div>
 
@@ -54,7 +58,7 @@
         </tr>
         {{else}}
             <h3>
-                No matches found. <a href="/products/{{id}}/matches/new">Add one?</a>
+                No matches found. <% if user_signed_in? && current_user.is_admin %><a href="/products/{{id}}/matches/new">Add one?</a><% end %>
             </h3>
         {{/each}}
     </table>

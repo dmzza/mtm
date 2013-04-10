@@ -27,6 +27,11 @@
 	</div>
 	<span class="copyright">
 		<br>
-		<%= image_tag 'footer_kiss.png' %><br>
+		<% if !user_signed_in? %>
+			<%= link_to image_tag('footer_kiss.png'), new_user_session_path %>
+		<% else %>
+			<%= image_tag 'footer_kiss.png' %>
+		<% end %>
+		<br>
 		All rights reserved. © 2012 Match that Makeup</span>
 </div>
