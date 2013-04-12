@@ -1,11 +1,15 @@
+<%= link_to image_tag('howitworks_3.png', :size => '100x100', :class => 'pull-left'), root_path %>
+
 <div class="search">
 
-
     <%= form_tag products_path, :method => 'get' do %>
-        <div class="three_fourths shift_one">
+        <div class="two_thirds shift_one">
             <%= text_field_tag :q, params[:q] %>
         </div>
         <%= submit_tag "Go", :name => nil, class: "btn btn-danger btn-large" %>
+        <% if user_signed_in? %>
+            <%= link_to "Sign out", destroy_user_session_path, :method => :delete, :class => 'btn btn-info btn-large pull-right' %>
+        <% end %>
     <% end %>
 </div>
 

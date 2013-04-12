@@ -39,6 +39,10 @@ div.one_fourth {
 	@include span-columns(3);
 }
 
+div.two_thirds {
+	@include span-columns(8);
+}
+
 div.three_fourths {
 	@include span-columns(9);
 }
@@ -69,6 +73,11 @@ form {
 
 .field {
 	width: 50%;
+}
+
+input[type=text] {
+	font-family: 'futura-pt', sans-serif;
+	font-size: 1.3em;
 }
 
 textarea {
