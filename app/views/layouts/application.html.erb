@@ -12,7 +12,9 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <% if user_signed_in? %>
 	<%= render 'layouts/nav' %>
+  <% end %>
   <% flash.each do |type, message| %>
     <div class="alert <%= flash_class type %>">
       <button class="close" data-dismiss="alert">x</button>
