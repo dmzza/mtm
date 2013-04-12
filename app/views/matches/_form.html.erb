@@ -11,47 +11,54 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="field one_third left">
     <%= f.label :name %><br />
     <%= f.text_field :name %>
   </div>
-  <div class="field">
+  <div class="field one_fourth left">
     <%= f.label :price %><br />
-    <%= f.text_field :price %>
+    <%= f.number_field :price %>
   </div>
-  <div class="field">
+  <div class="field one_third left">
     <%= f.label :link %><br />
     <%= f.text_field :link %>
   </div>
-  <div class="field">
+  <div class="clearfix"></div>
+  <div class="field row">
     <%= f.label :description %><br />
     <%= f.text_area :description %>
   </div>
-  <div class="field">
+  <div class="clearfix"></div><br>
+  <div class="field one_half left">
     <%= f.label :brand_id %><br />
     <%= collection_select(:match, :brand_id, @brands, :id, :name, { :include_blank => true }) %>
   </div>
-  <div class="field">
+  <div class="field one_fourth left">
     <%= f.label :photo %><br />
     <%= f.file_field :photo %>
   </div>
-  <div class="field">
+  <div class="clearfix"></div>
+
+<div class="page-header"><h1>Match</h1></div>
+
+  <div class="field one_sixth left">
     <%= f.label :color %><br />
-    <%= f.text_field :color %>
+    <%= f.number_field :color %>
   </div>
-  <div class="field">
+  <div class="field one_sixth left">
     <%= f.label :texture %><br />
-    <%= f.text_field :texture %>
+    <%= f.number_field :texture %>
   </div>
-  <div class="field">
+  <div class="field one_sixth left">
     <%= f.label :luminosity %><br />
-    <%= f.text_field :luminosity %>
+    <%= f.number_field :luminosity %>
   </div>
-  <div class="field">
+  <div class="field shift_one one_fourth left">
     <%= f.label :overall %><br />
-    <%= f.text_field :overall %>
+    <%= f.number_field :overall %>
   </div>
-  <div class="actions">
-    <%= f.submit %>
+  <div class="clearfix"></div><br>
+  <div class="actions text-center">
+    <%= f.submit 'Submit', class: "btn btn-inverse btn-large" %>
   </div>
 <% end %>

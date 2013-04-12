@@ -27,6 +27,10 @@ div.one_half {
 	@include span-columns(6);
 }
 
+div.one_sixth {
+	@include span-columns(2);
+}
+
 div.one_third {
 	@include span-columns(4);
 }
