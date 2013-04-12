@@ -1,4 +1,4 @@
-<%= link_to image_tag('howitworks_3.png', :size => '100x100', :class => 'pull-left'), root_path %>
+<%= link_to image_tag('howitworks_3.png', :size => '100x100', :class => 'left'), root_path %>
 
 <div class="search">
 
@@ -8,7 +8,7 @@
         </div>
         <%= submit_tag "Go", :name => nil, class: "btn btn-danger btn-small" %>
         <% if user_signed_in? %>
-            <%= link_to "Sign out", destroy_user_session_path, :method => :delete, :class => 'btn btn-info btn-large pull-right' %>
+            <%= link_to "Sign out", destroy_user_session_path, :method => :delete, :class => 'btn btn-info btn-small right' %>
         <% end %>
     <% end %>
 </div>
