@@ -12,7 +12,7 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-      <%= yield %>
+  <%= yield %>
 	<script>
       $(function() {
         window.addEventListener("load",function() {
@@ -22,5 +22,6 @@
         });
       });
     </script>
+  <%= render 'layouts/analytics' %>
 </body>
 </html>
