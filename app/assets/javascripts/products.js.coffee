@@ -12,6 +12,7 @@ $(() ->
 		matches = []
 		$product.children(".match").each(->
 			matches.push({
+				link: $(this).data('link')
 				texture: $(this).data('texture')
 				luminosity: $(this).data('luminosity')
 				color: $(this).data('color')

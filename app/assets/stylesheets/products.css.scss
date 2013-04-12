@@ -12,6 +12,7 @@
 	width: 850px;
 	height: 85%;
 	overflow: scroll;
+	background-color: #EDEDED;
 }
 
 .detail {
@@ -90,6 +91,10 @@
 	cursor: pointer;
 	text-align: center;
 	padding: 20px;
+	a {
+		color: white;
+		text-decoration: none;
+	}
 }
 
 ul {
