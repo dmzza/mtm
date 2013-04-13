@@ -34,6 +34,11 @@ $(() ->
 		html = template(context)
 
 		$(".detail").html(html)
+		ga('send', {
+			'hitType': 'pageview',
+			'page': '/products/' + context.id,
+			'title': context.name
+		})
 
 	if $(".master li:first-child").length and $(".master li:first-child").data('name') isnt 'New Product'
 		showProduct($(".master li:first-child"))
