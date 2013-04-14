@@ -37,11 +37,25 @@ cite {
 }
 
 .page-header {
-  padding-bottom: 3px;
-  margin: 20px 0 30px;
-  border-bottom: 1px solid #EEE;
+  padding: 22px 0;
+  margin-bottom: 30px;
+  position: absolute;
+  z-index: 1;
+  top:0;
 }
 
-.page-header h1 {
+h1 {
     font-family: "proxima-nova";
+}
+
+@media all and (max-width: 1080px) {
+  .page-header {
+    top:15px;
+    right:5%;
+    h1 {
+      float: right;
+      display: block;
+
+    }
+  }
 }

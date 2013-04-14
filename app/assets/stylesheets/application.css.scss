@@ -15,6 +15,10 @@
 @import "bourbon";
 @import "neat";
 
+body {
+	background-color: #EEE;
+}
+
 div.container {
 	@include outer-container;
 }
@@ -23,20 +27,24 @@ div.row {
 	@include span-columns(12);
 }
 
-div.one_half {
-	@include span-columns(6);
-}
-
 div.one_sixth {
 	@include span-columns(2);
+}
+
+div.one_fourth {
+	@include span-columns(3);
 }
 
 div.one_third {
 	@include span-columns(4);
 }
 
-div.one_fourth {
-	@include span-columns(3);
+div.five_twelfths {
+	@include span-columns(5);
+}
+
+div.one_half {
+	@include span-columns(6);
 }
 
 div.two_thirds {
@@ -67,8 +75,13 @@ div.shift_four {
 	@include shift(4);
 }
 
+div.last_column {
+	@include omega();
+}
+
 form {
-	margin: 20px;
+	margin-top: 20px;
+	margin-bottom: 20px;
 }
 
 .field {
@@ -105,24 +118,25 @@ div.updateform {
 // Navigation
 
 .navigation {
-	background-color: #333;
+	background-color: #FFF;
+	height:101px;
 	color: white;
 	text-transform: uppercase;
 	width: 100%;
+	border-bottom:1px solid #EEE;
+	.nav-inner {
+		max-width: 65em;
+		margin: 0 auto;
+	}
+	a {
+		color: white;
+		&:hover {
+			color: white;
+			text-decoration: none;
+		}
+	}
 }
 
-.nav-inner {
-	width: 60%;
-	margin: 0 auto;
-}
-
-.navigation a {
-	color: white;
-}
-
-.navigation a:hover {
-	color: white;
-	text-decoration: none;
 }
 
 // Footer
