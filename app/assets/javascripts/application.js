@@ -13,4 +13,12 @@
 //= require jquery
 //= require jquery_ujs
 //= require handlebars
+//= require_self
 //= require_tree .
+
+$(function() {
+	setTimeout(function(){
+		$(".alert").fadeOut(1500);
+	}, 2000);
+
+});

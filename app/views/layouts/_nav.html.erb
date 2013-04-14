@@ -9,4 +9,10 @@
 
 		<% end %>
 	</div>
+	<% flash.each do |type, message| %>
+    <div class="alert <%= flash_class type %>">
+      <h1><%= message %></h1>
+    </div>
+    <div class="clearfix"></div>
+  <% end %>
 </div>
