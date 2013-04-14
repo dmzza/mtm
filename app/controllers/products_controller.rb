@@ -4,12 +4,16 @@ class ProductsController < ApplicationController
   # GET /products
   # GET /products.json
   def index
-    @products = Product.search(params[:q])
-    @similar = Product.similar(params[:q])
+    if(!params[:q] || params[:q] == "")
+      redirect_to root_url
+    else
+      @products = Product.search(params[:q])
+      @similar = Product.similar(params[:q])
 
-    respond_to do |format|
-      format.html { render layout: "clean" } # index.html.erb
-      format.json { render json: @products }
+      respond_to do |format|
+        format.html { render layout: "clean" } # index.html.erb
+        format.json { render json: @products }
+      end
     end
   end
 
