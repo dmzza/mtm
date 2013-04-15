@@ -4,6 +4,8 @@ class MatchesControllerTest < ActionController::TestCase
   setup do
     @product = products(:one)
     @match = matches(:one)
+    @user = users(:one)
+    sign_in @user
   end
 
   test "should get index" do
@@ -22,7 +24,7 @@ class MatchesControllerTest < ActionController::TestCase
       post :create, :product_id => @product.id, match: { color: @match.color, description: @match.description, link: @match.link, luminosity: @match.luminosity, name: @match.name, overall: @match.overall, price: @match.price, texture: @match.texture }
     end
 
-    assert_redirected_to product_path(@product)
+    assert_redirected_to product_matches_path(@product)
   end
 
   test "should show match" do
@@ -37,7 +39,7 @@ class MatchesControllerTest < ActionController::TestCase
 
   test "should update match" do
     put :update, id: @match, :product_id => @product.id, match: { color: @match.color, description: @match.description, link: @match.link, luminosity: @match.luminosity, name: @match.name, overall: @match.overall, price: @match.price, texture: @match.texture }
-    assert_redirected_to product_path(@product)
+    assert_redirected_to product_matches_path(@product)
   end
 
   test "should destroy match" do
@@ -45,6 +47,6 @@ class MatchesControllerTest < ActionController::TestCase
       delete :destroy, id: @match, :product_id => @product.id
     end
 
-    assert_redirected_to product_path(@product)
+    assert_redirected_to product_matches_path(@product)
   end
 end

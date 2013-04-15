@@ -3,9 +3,24 @@ require 'test_helper'
 class ProductsControllerTest < ActionController::TestCase
   setup do
     @product = products(:one)
+    @user = users(:one)
+    sign_in @user
   end
 
   test "should get index" do
+    get :index
+    assert_redirected_to root_url
+  end
+
+  test "should get search results" do
+    get :index, { :q => 'chanel' }
+    assert_response :success
+    assert_not_nil assigns(:products)
+  end
+
+  test "should get admin index" do
+    @admin = users(:admin)
+    sign_in @admin
     get :index
     assert_response :success
     assert_not_nil assigns(:products)
@@ -26,7 +41,7 @@ class ProductsControllerTest < ActionController::TestCase
 
   test "should show product" do
     get :show, id: @product
-    assert_response :success
+    assert_redirected_to products_path({ :q => @product.name })
   end
 
   test "should get edit" do

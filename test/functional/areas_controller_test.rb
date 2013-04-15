@@ -3,6 +3,8 @@ require 'test_helper'
 class AreasControllerTest < ActionController::TestCase
   setup do
     @area = areas(:eyes)
+    @user = users(:one)
+    sign_in @user
   end
 
   test "should get index" do

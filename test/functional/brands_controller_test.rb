@@ -3,6 +3,8 @@ require 'test_helper'
 class BrandsControllerTest < ActionController::TestCase
   setup do
     @brand = brands(:chanel)
+    @user = users(:one)
+    sign_in @user
   end
 
   test "should get index" do

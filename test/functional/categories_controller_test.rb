@@ -3,6 +3,8 @@ require 'test_helper'
 class CategoriesControllerTest < ActionController::TestCase
   setup do
     @category = categories(:eyeliner)
+    @user = users(:one)
+    sign_in @user
   end
 
   test "should get index" do
