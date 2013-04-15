@@ -162,10 +162,16 @@ div.updateform {
 	top:0;
 	width:100%;
 	height:100px;
-	background-color:#78C929;
+	background-color:white;
 	h1 {
 		max-width: 33em;
 		margin: 40px auto;
+	}
+	&.alert-success {
+		background-color:#78C929;
+	}
+	&.alert-error {
+		background-color:rgba(210, 34, 41, 1.0);
 	}
 }
 

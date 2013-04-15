@@ -1,7 +1,5 @@
 <div class="navigation">
-	<% if user_signed_in? %>
-		<%= link_to image_tag('howitworks_3.png', :size => '100x100', :class => 'left'), root_path %>
-	<% end %>
+	<%= link_to image_tag('howitworks_3.png', :size => '100x100', :class => 'left'), root_path %>
 	<div class="nav-inner">
 		<% if user_signed_in? %>
 			<%= link_to "Sign Out", destroy_user_session_path, :method => :delete, :class => 'btn btn-small btn-inverse right' %>
