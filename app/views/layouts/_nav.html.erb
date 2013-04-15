@@ -4,9 +4,10 @@
 	<% end %>
 	<div class="nav-inner">
 		<% if user_signed_in? %>
-			<%= link_to "Sign Out", destroy_user_session_path, :method => :delete, :class => 'btn btn-small btn-info right' %>
-			<!-- <%= link_to "Products", destroy_user_session_path, :method => :delete, :class => 'btn btn-small btn-info right' %> -->
-
+			<%= link_to "Sign Out", destroy_user_session_path, :method => :delete, :class => 'btn btn-small btn-inverse right' %>
+			<% if current_user.is_admin? %>
+				<%= link_to "Products", products_path, :class => 'btn btn-small btn-inverse right' %>
+			<% end %>
 		<% end %>
 	</div>
 	<% flash.each do |type, message| %>

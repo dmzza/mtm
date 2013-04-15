@@ -6,7 +6,7 @@
         <div class="two_thirds shift_one">
             <%= text_field_tag :q, params[:q] %>
         </div>
-        <%= submit_tag "Go", :name => nil, class: "btn btn-danger btn-small" %>
+        <%= submit_tag "Go", :name => nil, class: "btn btn-inverse btn-small" %>
         <% if user_signed_in? %>
             <%= link_to "Sign out", destroy_user_session_path, :method => :delete, :class => 'btn btn-info btn-small right' %>
         <% end %>

@@ -5,7 +5,12 @@ class ProductsController < ApplicationController
   # GET /products.json
   def index
     if(!params[:q] || params[:q] == "")
-      redirect_to root_url
+      if(user_signed_in? && current_user.is_admin?)
+        @products = Product.all
+        render template: 'products/matrix'
+      else
+        redirect_to root_url
+      end
     else
       @products = Product.search(params[:q])
       @similar = Product.similar(params[:q])

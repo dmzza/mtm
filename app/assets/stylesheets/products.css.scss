@@ -133,6 +133,18 @@ ul {
 	}
 }
 
+.row.product {
+	margin-top: 5px;
+	.category-name {
+		font-family: 'futura-pt', sans-serif;
+		text-transform: uppercase;
+ 		margin-bottom:17px;
+	}
+	.btn {
+		margin-bottom: 5px;
+	}
+}
+
 @media all and (max-width: 1300px) {
 	.master {
 		width: 570px;

@@ -79,6 +79,11 @@ div.last_column {
 	@include omega();
 }
 
+div img {
+	position:relative;
+	max-width:100%;
+}
+
 form {
 	margin-top: 20px;
 	margin-bottom: 20px;
@@ -108,6 +113,15 @@ h3 {
 	clear: both;
 	line-height: 1.1em;
 	margin: 0 0 0 10px;
+}
+
+h4 {
+	font-size:1.5em;
+	font-weight: 500;
+	font-family: 'futura-pt', sans-serif;
+	text-transform: uppercase;
+	line-height:1em;
+	margin: 10px 0;
 }
 
 div.updateform {
@@ -196,5 +210,8 @@ div.footer {
   clear: both;
 }
 
+.solid-white {
+	background-color:white;
+}
 
 
