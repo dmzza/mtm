@@ -17,7 +17,7 @@
   </div>
   <div class="field one_sixth left">
     <%= f.label :price %><br />
-    <%= f.number_field :price %>
+    <%= f.number_field :price, :min => 0, :step => 0.01  %>
   </div>
   <div class="field five_twelfths left last_column">
     <%= f.label :link %><br />
@@ -43,19 +43,19 @@
 
   <div class="field one_sixth left">
     <%= f.label :color %><br />
-    <%= f.number_field :color %>
+    <%= f.number_field :color, :min => 0, :max => 5, :step => 0.5 %>
   </div>
   <div class="field one_sixth left">
     <%= f.label :texture %><br />
-    <%= f.number_field :texture %>
+    <%= f.number_field :texture, :min => 0, :max => 5, :step => 0.5  %>
   </div>
   <div class="field one_sixth left">
     <%= f.label :luminosity %><br />
-    <%= f.number_field :luminosity %>
+    <%= f.number_field :luminosity, :min => 0, :max => 5, :step => 0.5  %>
   </div>
   <div class="field shift_one one_fourth left">
     <%= f.label :overall %><br />
-    <%= f.number_field :overall %>
+    <%= f.number_field :overall, :min => 0, :max => 100, :step => 0.01  %>
   </div>
   <div class="clearfix"></div><br>
   <div class="actions text-center">

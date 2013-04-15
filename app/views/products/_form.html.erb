@@ -17,7 +17,7 @@
   </div>
   <div class="field one_sixth left">
     <%= f.label :price %><br />
-    <%= f.text_field :price %>
+    <%= f.text_field :price, :min => 0, :step => 0.01 %>
   </div>
     <div class="field five_twelfths left last_column">
     <%= f.label :link %><br />
