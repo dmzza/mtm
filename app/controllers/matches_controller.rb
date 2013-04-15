@@ -85,7 +85,7 @@ class MatchesController < ApplicationController
     @match.destroy
 
     respond_to do |format|
-      format.html { redirect_to @product }
+      format.html { redirect_to product_matches_path(@product) }
       format.json { head :no_content }
     end
   end
