@@ -27,6 +27,10 @@ div.row {
 	@include span-columns(12);
 }
 
+div.one_twelfth {
+	@include span-columns(1);
+}
+
 div.one_sixth {
 	@include span-columns(2);
 }
@@ -141,6 +145,7 @@ div.updateform {
 	.nav-inner {
 		max-width: 65em;
 		margin: 0 auto;
+		@include outer-container;
 	}
 	a {
 		color: white;
@@ -154,6 +159,7 @@ div.updateform {
 .alert {
 	position:absolute;
 	z-index:2;
+	top:0;
 	width:100%;
 	height:100px;
 	background-color:#78C929;
