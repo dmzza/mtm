@@ -143,6 +143,11 @@ ul {
 	.btn {
 		margin-bottom: 5px;
 	}
+	&.header {
+		font-size:1.0em;
+		font-family:'proxima-nova', sans-serif;
+		text-transform: uppercase;
+	}
 }
 
 @media all and (max-width: 1300px) {
