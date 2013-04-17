@@ -51,6 +51,14 @@
 
     <h3>Matches</h3>
     <table>
+        <tr>
+            <th></th>
+            <th>color</th>
+            <th>luminosity</th>
+            <th>texture</th>
+            <th>overall</th>
+            <th>price</th>
+        </tr>
         {{#each matches}}
         <tr>
             <td><img src="{{photo}}"></td>
@@ -58,6 +66,7 @@
             <td>{{luminosity}}</td>
             <td>{{texture}}</td>
             <td>{{overall}}</td>
+            <td>{{price}}</td>
             <td class="buy"><a href="{{link}}">Buy</a></td>
         </tr>
         {{else}}

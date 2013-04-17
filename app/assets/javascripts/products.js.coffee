@@ -18,6 +18,7 @@ $(() ->
 				color: $(this).data('color')
 				overall: $(this).data('overall')
 				photo: $(this).data('photo')
+				price: $(this).data('price')
 			})
 		)
 
