@@ -22,9 +22,11 @@ class Product < ActiveRecord::Base
   def self.similar(query)
 		results = search(query)
 		ids = []
+    areas = []
 		results.each do |result|
 			ids.push(result.id)
+      areas.push(result.area_id)
 		end
-		Product.find(:all, :conditions => ['id NOT IN (?)', ids])
+		Product.find(:all, :conditions => ['id NOT IN (?) AND area_id IN (?)', ids, areas])
   end
 end
