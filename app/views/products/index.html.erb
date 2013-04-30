@@ -14,7 +14,7 @@
 </div>
 
 <div class="master">
-    <ul>
+    <ul class="products">
         <%= render :partial => 'product', :collection => @products %>
         <% if user_signed_in? && current_user.is_admin %>
         <li data-name="New Product">
@@ -50,33 +50,23 @@
 
 
     <h3>Matches</h3>
-    <table>
-        {{#if matches}}
-        <tr>
-            <th></th>
-            <th>color</th>
-            <th>luminosity</th>
-            <th>texture</th>
-            <th>overall</th>
-            <th>price</th>
-        </tr>
-        {{/if}}
+    <ul class="matches">
         {{#each matches}}
-        <tr>
-            <td><img src="{{photo}}"></td>
-            <td>{{color}}</td>
-            <td>{{luminosity}}</td>
-            <td>{{texture}}</td>
-            <td>{{overall}}</td>
-            <td>{{price}}</td>
-            <td class="buy"><a href="{{link}}">Buy</a></td>
-        </tr>
+        <li class="match">
+            <div><img src="{{photo}}"></div>
+            <div>{{color}}</div>
+            <div>{{luminosity}}</div>
+            <div>{{texture}}</div>
+            <div>{{overall}}</div>
+            <div>{{price}}</div>
+            <div class="buy"><a href="{{link}}">Buy</a></div>
+        </li>
         {{else}}
-            <h3>
+            <li>
                 No matches found. <% if user_signed_in? && current_user.is_admin %><a href="/products/{{id}}/matches/new">Add one?</a><% end %>
-            </h3>
+            </li>
         {{/each}}
-    </table>
+    </ul>
 </script>
 
 

@@ -48,10 +48,10 @@
 		float: right;
 		padding: 10px;
 	}
-	table {
+	ul.matches {
 		color: black;
 		margin: 0 10px 25px 10px;
-		tr {
+		li.matches {
 			background-color: white;
 			border-top: 10px solid #333;
 			&:first-child {
@@ -61,7 +61,7 @@
 					color: white;
 				}
 			}
-			td {
+			div {
 				width: 17%;
 				position: relative;
 				text-align: left;
@@ -107,7 +107,7 @@
 	}
 }
 
-ul {
+ul.products {
 	margin: 0;
 	padding: 0;
 	padding-left: 10px;
