@@ -1,9 +1,10 @@
 .btn {
   display: inline-block;
-  padding: 0px 8px;
+  padding: 0px 20px;
   font-weight: 700;
   margin-bottom: 0;
-  font-size: 12px;
+  font-size: 14px;
+  text-transform:uppercase;
   line-height: 22px;
   *line-height: 22px;
   text-align: center;
@@ -14,7 +15,7 @@
 -webkit-border-radius: 1px;
    -moz-border-radius: 1px;
         border-radius: 1px;
-  font-family: 'proxima-nova', helvetica, arial, sans-serif;
+  font-family: 'futura-pt', helvetica, arial, sans-serif;
   background-color: #f3f3f3;
   background-repeat: repeat-x;
   border-color: #e4e4e4;
@@ -201,14 +202,14 @@
 
 .btn-danger {
   color: #ffffff;
-  background-color: #db3c14;
-  border-color: #db3c14;
+  background-color: #ff2279;
+  border-color: #ff2279;
   -webkit-transition: background-color .4s ease-in-out;
      -moz-transition: background-color .4s ease-in-out;
           transition: background-color .4s ease-in-out;
 }
 .btn-danger:not(.active):hover {
-  background-color: #ec4f11;
+  background-color: #dc1c68;
 }
 .btn-danger:hover,
 .btn-danger:active,
@@ -302,7 +303,7 @@
 
 .btn-inverse {
   color:  white;
-  background-color: #4e5563;
+  background-color: #0c0c0c;
   border-color: #4e5563;
   -webkit-transition: background-color .4s ease-in-out;
      -moz-transition: background-color .4s ease-in-out;

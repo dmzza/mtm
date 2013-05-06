@@ -35,13 +35,21 @@
 </div>
 
 <script id="product-template" type="text/x-handlebars-template">
-    <div class="product-image left"><img src="{{photo}}" class="left"></div>
+    <div class="product-image left">
+        <img src="{{photo}}" class="left">
+    </div>
     <div class="description left">
         <h3><span class="brand">{{brand}}</span></h3>
         <h4>{{name}}</h4>
         <p>
             {{description}}<br /><br />
-            <a href="{{link}}" class="btn btn-danger">Buy: {{price}}</a>
+            <div class="left one_half">
+            <h5>{{price}}</h5>
+            </div>
+            <div class="left one_fourth">
+            <a href="{{link}}" class="btn btn-danger">Buy</a>
+            </div>
+            <div class="clearfix"></div>
             <% if user_signed_in? && current_user.is_admin %>
             <a href="/products/{{id}}/matches/new" class="btn btn-primary">Add Match</a>
             <a href="/products/{{id}}/edit" class="btn btn-warning">Edit</a>
