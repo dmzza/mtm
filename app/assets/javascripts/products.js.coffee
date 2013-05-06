@@ -14,6 +14,8 @@ $(() ->
 		$product.addClass('active');
 		$product.children(".match").each(->
 			matches.push({
+				name: $(this).data('name')
+				brand: $(this).data('brand')
 				link: $(this).data('link')
 				texture: starMapping($(this).data('texture'))
 				luminosity: starMapping($(this).data('luminosity'))

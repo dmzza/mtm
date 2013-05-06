@@ -58,11 +58,15 @@
     </div>
 
 
-    <h3>Matches</h3>
+    <h3 id="matched-products">Matched Products</h3>
     <ul class="matches">
         {{#each matches}}
         <li class="match left">
             <div><img src="{{photo}}"></div>
+            <div class="name">
+                <h3>{{brand}}</h3>
+                <h4>{{name}}</h4>
+            </div>
             <div>
                 <h5>Color</h5>
                 {{color}}</div>
