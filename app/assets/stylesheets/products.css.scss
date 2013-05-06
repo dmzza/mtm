@@ -15,7 +15,7 @@
 	width: 865px;
 	height: 85%;
 	overflow: scroll;
-	background-color: #EDEDED;
+	background-color: #fff;
 }
 
 .detail {
@@ -23,8 +23,8 @@
 	height: 85%;
 	left: 850px;
 	overflow: scroll;
-	background-color: #333; /* #FAFAFA; */
-	color: white;
+	background-color: #fafafa;
+	color: #000;
 	h3 {
 		padding-top: 10px;
 		clear: both;
@@ -33,7 +33,7 @@
 		font-weight: bold;
 	}
 	.description {
-		width: 60%;
+		width: 50%;
 		float: right;
 		padding: 10px 20px;
 		p {
@@ -44,9 +44,8 @@
 		}
 	}
 	img {
-		width: 40%;
-		float: right;
 		padding: 10px;
+		width: 100%;
 	}
 	ul.matches {
 		color: black;
@@ -153,6 +152,23 @@ ul.products {
 	&.header {
 		font-size:1.0em;
 		font-family:'proxima-nova', sans-serif;
+		text-transform: uppercase;
+	}
+}
+
+div.product-image {
+	width: 50%;
+}
+
+.match {
+	width: 125px;
+	background-color: #fff;
+	border: 1px solid #eee;
+	margin-right: 25px;
+	list-style: none;
+	text-align: center;
+	h5 {
+		color: #6a6a6a;
 		text-transform: uppercase;
 	}
 }

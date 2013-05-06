@@ -35,8 +35,8 @@
 </div>
 
 <script id="product-template" type="text/x-handlebars-template">
-    <img src="{{photo}}">
-    <div class="description">
+    <div class="product-image left"><img src="{{photo}}" class="left"></div>
+    <div class="description left">
         <h3><span class="brand">{{brand}}</span> {{name}}</h3>
         <p>
             {{description}}<br /><br />
@@ -52,13 +52,27 @@
     <h3>Matches</h3>
     <ul class="matches">
         {{#each matches}}
-        <li class="match">
+        <li class="match left">
             <div><img src="{{photo}}"></div>
-            <div>{{color}}</div>
-            <div>{{luminosity}}</div>
-            <div>{{texture}}</div>
-            <div>{{overall}}</div>
-            <div>{{price}}</div>
+            <div>
+                <h5>Color</h5>
+                {{color}}</div>
+            <div>
+               <h5>Luminosity</h5>
+                {{luminosity}}
+            </div>
+            <div>
+                <h5>Texture</h5>
+                {{texture}}
+            </div>
+            <div>
+                <h5>Overall</h5>
+                {{overall}}
+            </div>
+            <div>
+                <h5>Price</h5>
+                {{price}}
+            </div>
             <div class="buy"><a href="{{link}}">Buy</a></div>
         </li>
         {{else}}
