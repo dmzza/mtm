@@ -10,6 +10,8 @@ $(() ->
 			return
 		template = Handlebars.compile(source)
 		matches = []
+		$(".active").removeClass("active");
+		$product.addClass('active');
 		$product.children(".match").each(->
 			matches.push({
 				link: $(this).data('link')

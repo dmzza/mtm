@@ -25,9 +25,17 @@
 	overflow: scroll;
 	background-color: #fafafa;
 	color: #000;
+	font-family: 'futura-pt', sans-serif;
 	h3 {
 		padding-top: 10px;
 		clear: both;
+		text-align:left;
+		margin: 0;
+	}
+	h4 {
+		margin-top:3px;
+		font-weight:400;
+		font-size: 1.3em;
 	}
 	.brand {
 		font-weight: bold;
@@ -37,56 +45,31 @@
 		float: right;
 		padding: 10px 20px;
 		p {
+			color: #888;
 			margin-top: 10px;
+			font-size: 1.1em;
+			line-height: 1.4em;
 		}
 		h3 {
 			clear: none;
 		}
 	}
 	img {
-		padding: 10px;
 		width: 100%;
 	}
 	ul.matches {
 		color: black;
 		margin: 0 10px 25px 10px;
-		li.matches {
+		li.match {
+			width: 125px;
 			background-color: white;
-			border-top: 10px solid #333;
-			&:first-child {
-				background-color: transparent;
-				th {
-					text-align: left;
-					color: white;
-				}
-			}
-			div {
-				width: 17%;
-				position: relative;
-				text-align: left;
-				font-family: 'futura-pt', sans-serif;
-				font-size: 1.5em;
-				&:nth-child(1) {
-					width:20%;
-				}
-				/*&:nth-child(2) {
-					width: 30%;
-				}
-				&:nth-child(3) {
-					width: 22%;
-				}
-				&:nth-child(4) {
-					width: 22%;
-				}
-				&:nth-child(5) {
-					width: 25%;
-				}*/
-				img {
-					margin-top: 0;
-					padding: 0;
-					float: left;
-					width: 55%;
-				}
+			box-shadow:0px 0px 10px 0px #EEE;
+			margin-right: 25px;
+			list-style: none;
+			text-align: center;
+			h5 {
+				color: #6a6a6a;
+				text-transform: uppercase;
 			}
 		}
 	}
@@ -123,6 +106,10 @@ ul.products {
 		&:hover {
 			cursor: pointer;
 		}
+		&.active {
+			opacity:0.31;
+			cursor:default;
+		}
 		img {
 			display: block;
 		}
@@ -158,20 +145,10 @@ ul.products {
 
 div.product-image {
 	width: 50%;
+	padding:10px;
 }
 
-.match {
-	width: 125px;
-	background-color: #fff;
-	border: 1px solid #eee;
-	margin-right: 25px;
-	list-style: none;
-	text-align: center;
-	h5 {
-		color: #6a6a6a;
-		text-transform: uppercase;
-	}
-}
+
 
 @media all and (max-width: 1300px) {
 	.master {
