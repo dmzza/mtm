@@ -13,9 +13,9 @@ $(() ->
 		$product.children(".match").each(->
 			matches.push({
 				link: $(this).data('link')
-				texture: $(this).data('texture')
-				luminosity: $(this).data('luminosity')
-				color: $(this).data('color')
+				texture: starMapping($(this).data('texture'))
+				luminosity: starMapping($(this).data('luminosity'))
+				color: starMapping($(this).data('color'))
 				overall: $(this).data('overall')
 				photo: $(this).data('photo')
 				price: $(this).data('price')
@@ -40,6 +40,8 @@ $(() ->
 			'page': '/products/' + context.id,
 			'title': context.name
 		})
+
+	starMapping = (ranking) -> Math.ceil((ranking * 4) / 5)
 
 	if $(".master li:first-child").length and $(".master li:first-child").data('name') isnt 'New Product'
 		showProduct($(".master li:first-child"))
