@@ -3,6 +3,21 @@
 # You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
 
 $(() ->
+	numberOfStars = 4;
+
+	Handlebars.registerHelper('stars', (stars) ->
+		star = "<div class='star'></div>"
+		unstar = "<div class='unstar'></div>"
+		output = ""
+
+		for i in [1..stars]
+			output += star
+		if(stars < numberOfStars)
+			for j in [stars..(numberOfStars - 1)]
+				output += unstar
+		return new Handlebars.SafeString(output)
+	)
+
 	showProduct = ($product) ->
 		source = $("#product-template").html()
 		if $product.data('name') is 'New Product'
@@ -10,8 +25,8 @@ $(() ->
 			return
 		template = Handlebars.compile(source)
 		matches = []
-		$(".active").removeClass("active");
-		$product.addClass('active');
+		$(".active").removeClass("active")
+		$product.addClass('active')
 		$product.children(".match").each(->
 			matches.push({
 				name: $(this).data('name')
@@ -45,7 +60,7 @@ $(() ->
 			'title': context.name
 		})
 
-	starMapping = (ranking) -> Math.ceil((ranking * 4) / 5)
+	starMapping = (ranking) -> Math.round((ranking * numberOfStars) / 5)
 
 	if $(".master li:first-child").length and $(".master li:first-child").data('name') isnt 'New Product'
 		showProduct($(".master li:first-child"))
