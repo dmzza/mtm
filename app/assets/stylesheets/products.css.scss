@@ -7,6 +7,12 @@
 	padding: 11px 0;
 	form {
 		margin:20px;
+		.searchbox {
+			width: 50%;
+		}
+	}
+	.btn-inverse {
+		margin-left: 15px;
 	}
 }
 
@@ -182,6 +188,9 @@ div.product-image {
 
 
 @media all and (max-width: 1300px) {
+	.search form .searchbox {
+		width: 30%;
+	}
 	.master {
 		width: 585px;
 	}
@@ -203,6 +212,9 @@ div.product-image {
 }
 
 @media all and (max-width: 800px) {
+	.search form .searchbox {
+		width: 20%;
+	}
 	.master {
 		width: 445px;
 	}
@@ -220,6 +232,10 @@ div.product-image {
 }
 
 @media all and (max-width: 650px) {
+	.search form .searchbox {
+		clear: left;
+		width: 50%;
+	}
 	.master {
 		width: 100%;
 		overflow: visible;

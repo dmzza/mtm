@@ -3,7 +3,7 @@
 	<div class="container">
 		<h1><span>Match</span>That<span>Makeup</span></h1>
 		<%= form_tag products_path, :method => 'get' do %>
-		<div class="three_fourths shift_one">
+		<div class="searchbox three_fourths shift_one">
 			<%= text_field_tag :q %>
 		</div>
 		<%= submit_tag "Go", :name => nil, class: "btn btn-inverse btn-small" %>

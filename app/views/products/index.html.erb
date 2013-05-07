@@ -1,14 +1,15 @@
-<%= link_to image_tag('howitworks_3.png', :size => '100x100', :class => 'left'), root_path %>
 
 <div class="search">
-
+    <div id="logo" class="left">
+        <%= link_to image_tag('header-logo.png', :size => '305x30'), root_path %>
+    </div>
     <%= form_tag products_path, :method => 'get' do %>
-        <div class="two_thirds shift_one">
+        <div class="left searchbox">
             <%= text_field_tag :q, params[:q] %>
         </div>
         <%= submit_tag "Go", :name => nil, class: "btn btn-inverse btn-small" %>
         <% if user_signed_in? %>
-            <%= link_to "Sign out", destroy_user_session_path, :method => :delete, :class => 'btn btn-info btn-small right' %>
+            <%= link_to "Sign out", destroy_user_session_path, :method => :delete, :class => 'btn btn-danger btn-small right' %>
         <% end %>
     <% end %>
 </div>
