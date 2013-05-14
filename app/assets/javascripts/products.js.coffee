@@ -25,23 +25,25 @@ $(() ->
 			return
 		template = Handlebars.compile(source)
 		matches = []
+		productId = $product.data('id')
 		$(".active").removeClass("active")
-		$product.addClass('active')
-		$product.children(".match").each(->
-			matches.push({
-				id: $(this).data('id')
-				name: $(this).data('name')
-				brand: $(this).data('brand')
-				link: $(this).data('link')
-				texture: starMapping($(this).data('texture'))
-				luminosity: starMapping($(this).data('luminosity'))
-				color: starMapping($(this).data('color'))
-				overall: $(this).data('overall')
-				photo: $(this).data('photo')
-				price: $(this).data('price')
-				description: $(this).data('description')
-			})
-		)
+		if($product.children(".match").length > 0)
+			$(".master li[data-id=" + productId + "]").addClass('active')
+			$product.children(".match").each(->
+				matches.push({
+					id: $(this).data('id')
+					name: $(this).data('name')
+					brand: $(this).data('brand')
+					link: $(this).data('link')
+					texture: starMapping($(this).data('texture'))
+					luminosity: starMapping($(this).data('luminosity'))
+					color: starMapping($(this).data('color'))
+					overall: $(this).data('overall')
+					photo: $(this).data('photo')
+					price: $(this).data('price')
+					description: $(this).data('description')
+				})
+			)
 
 		context = {
 			id: $product.data('id')
@@ -73,8 +75,11 @@ $(() ->
 		)
 
 		$(".detail").on("click", "li div", ->
+			$product = $(".active")
 			showProduct($(this).parent())
-			hideProductStuff()
+			if($(this).parent().children(".match").length == 0)
+				hideProductStuff()
+				createBackButton($product)
 		)
 
 	hideProductStuff = ->
@@ -82,6 +87,13 @@ $(() ->
 		$(".description .btn-warning").hide()
 		$("#matched-products").hide()
 		$(".matches").hide()
+
+	createBackButton = ($product) ->
+		$back = $product.clone()
+		$back.children("img, p").remove()
+		$back.addClass("back")
+		$back.append("<div class='btn btn-primary'>back</div>")
+		$(".detail .description").append($back)
 
 
 )
