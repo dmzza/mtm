@@ -3,6 +3,6 @@
     <p><span class="brand"><%= product.brand.name %></span></p>
     <p><%= truncate(product.name, :length => 35) %></p>
     <% product.matches.each do |match| %>
-    	<span class="match" data-brand="<%= match.brand.name %>" data-name="<%= match.name %>" data-link="<%= match.link %>" data-color="<%= match.color %>" data-luminosity="<%= match.luminosity %>" data-texture="<%= match.texture %>" data-overall="<%= number_to_percentage(match.overall, :precision => 0) %>" data-photo="<%= match.photo.url(:square) %>" data-price="<%= number_to_currency(match.price, :precision => 0) %>"></span>
+    	<span class="match" data-id="<%= match.id %>" data-brand="<%= match.brand.name %>" data-name="<%= match.name %>" data-link="<%= match.link %>" data-color="<%= match.color %>" data-luminosity="<%= match.luminosity %>" data-texture="<%= match.texture %>" data-overall="<%= number_to_percentage(match.overall, :precision => 0) %>" data-photo="<%= match.photo.url(:square) %>" data-price="<%= number_to_currency(match.price, :precision => 0) %>" data-description="<%= match.description %>"></span>
     <% end %>
 </li>

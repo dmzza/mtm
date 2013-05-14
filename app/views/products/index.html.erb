@@ -62,7 +62,7 @@
     <h3 id="matched-products">Matched Products</h3>
     <ul class="matches">
         {{#each matches}}
-        <li class="match left">
+        <li class="match left" data-id="{{id}}" data-name="{{name}}" data-price="{{price}}" data-link="{{link}}" data-description="{{description}}" data-photo="{{photo}}" data-brand="{{brand}}">
             <div><img src="{{photo}}"></div>
             <div class="name">
                 <h3>{{brand}}</h3>

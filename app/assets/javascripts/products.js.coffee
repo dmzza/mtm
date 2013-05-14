@@ -29,6 +29,7 @@ $(() ->
 		$product.addClass('active')
 		$product.children(".match").each(->
 			matches.push({
+				id: $(this).data('id')
 				name: $(this).data('name')
 				brand: $(this).data('brand')
 				link: $(this).data('link')
@@ -38,6 +39,7 @@ $(() ->
 				overall: $(this).data('overall')
 				photo: $(this).data('photo')
 				price: $(this).data('price')
+				description: $(this).data('description')
 			})
 		)
 
@@ -52,8 +54,13 @@ $(() ->
 			matches: matches
 		}
 		html = template(context)
-
 		$(".detail").html(html)
+
+		$(".detail li").on("click", ->
+			showProduct($(this))
+			hideProductStuff()
+		)
+
 		ga('send', {
 			'hitType': 'pageview',
 			'page': '/products/' + context.id,
@@ -68,6 +75,12 @@ $(() ->
 		$(".master li").on("click", ->
 			showProduct($(this))
 		)
+
+	hideProductStuff = ->
+		$(".description .btn-primary").hide()
+		$(".description .btn-warning").hide()
+		$("#matched-products").hide()
+		$(".matches").hide()
 
 
 )
