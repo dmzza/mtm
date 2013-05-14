@@ -74,7 +74,7 @@ $(() ->
 			showProduct($(this))
 		)
 
-		$(".detail").on("click", "li div", ->
+		$(".detail").on("click", "li>div", ->
 			$product = $(".active")
 			showProduct($(this).parent())
 			if($(this).parent().children(".match").length == 0)
