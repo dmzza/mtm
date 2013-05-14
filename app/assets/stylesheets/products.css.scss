@@ -79,6 +79,11 @@
 			margin-bottom: 25px;
 			list-style: none;
 			text-align: center;
+			cursor:pointer;
+
+			&:hover {
+				box-shadow: 0 0 10px 0 #CCC;
+			}
 
 			h3 {
 				font-size: 1.2em;
@@ -136,6 +141,8 @@
 }
 
 .buy {
+	display: block;
+	text-decoration: none;
 	text-transform: uppercase;
 	background-color: #ff2279;
 	color: white;
@@ -144,7 +151,7 @@
 	text-align: center;
 	padding: 7px;
 	margin-top: 10px;
-	a {
+	&:hover {
 		color: white;
 		text-decoration: none;
 	}

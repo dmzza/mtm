@@ -56,10 +56,6 @@ $(() ->
 		html = template(context)
 		$(".detail").html(html)
 
-		$(".detail li").on("click", ->
-			showProduct($(this))
-			hideProductStuff()
-		)
 
 		ga('send', {
 			'hitType': 'pageview',
@@ -74,6 +70,11 @@ $(() ->
 
 		$(".master li").on("click", ->
 			showProduct($(this))
+		)
+
+		$(".detail").on("click", "li div", ->
+			showProduct($(this).parent())
+			hideProductStuff()
 		)
 
 	hideProductStuff = ->
