@@ -6,7 +6,7 @@ class ProductsController < ApplicationController
   def index
     if(!params[:q] || params[:q] == "")
       if(user_signed_in? && current_user.is_admin?)
-        @products = Product.all
+        @products = Product.find(:all, :order => "updated_at DESC")
         render template: 'products/matrix'
       else
         redirect_to root_url
